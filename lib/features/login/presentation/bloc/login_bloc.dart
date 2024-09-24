@@ -8,18 +8,12 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
   LoginBloc({required this.loginUseCase}) : super(LoginInitial()) {
     on<LoginButtonPressed>((event, emit) async {
-      if (event.email.isEmpty) {
-        emit(LoginFailure('Email should not be empty'));
-      } else if (event.password.isEmpty) {
-        emit(LoginFailure('Password should not be empty'));
+      if (event.mobileNumber.isEmpty) {
+        emit(LoginFailure('Mobile Number should not be empty'));
+      } else if (event.mobileNumber.length < 10) {
+        emit(LoginFailure('Enter valid mobile number'));
       } else {
-        emit(LoginLoading());
-        var result = await loginUseCase.execute(event.email, event.password);
-
-        result.fold(
-          (failure) => emit(LoginFailure('Login Failed')),
-          (user) => emit(LoginSuccess('Welcome, ${user.name}')),
-        );
+        emit(LoginSuccess('OTP sent to', event.mobileNumber));
       }
     });
 

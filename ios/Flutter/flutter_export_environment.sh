@@ -3,7 +3,7 @@
 export "FLUTTER_ROOT=/Users/manu/Documents/softwares/flutter"
 export "FLUTTER_APPLICATION_PATH=/Users/manu/Documents/code/GVB/trans-go-customer-app"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
-export "FLUTTER_TARGET=/Users/manu/Documents/code/GVB/trans-go-customer-app/lib/main.dart"
+export "FLUTTER_TARGET=/Users/manu/Documents/code/GVB/trans-go-customer-app/lib/main_dev.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
 export "FLUTTER_BUILD_NUMBER=1"

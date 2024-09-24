@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:trans_go_customer_app/features/login/data/models/user_model.dart';
 
 abstract class LoginRemoteDataSource {
-  Future<UserModel> login(String email, String password);
+  Future<UserModel> login(String mobileNumber);
 }
 
 class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
@@ -11,12 +11,11 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
   LoginRemoteDataSourceImpl(this.dio);
 
   @override
-  Future<UserModel> login(String email, String password) async {
+  Future<UserModel> login(String mobileNumber) async {
     final response = await dio.post(
       'https://api.example.com/login',
       data: {
-        'email': email,
-        'password': password,
+        'email': mobileNumber,
       },
     );
 

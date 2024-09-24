@@ -8,8 +8,8 @@ class LoginUseCase {
 
   LoginUseCase(this.repository);
 
-  Future<Either<Failure, User>> execute(String email, String password) async {
-    var result = await repository.login(email, password);
+  Future<Either<Failure, User>> execute(String mobileNumber) async {
+    var result = await repository.login(mobileNumber);
     return result.fold((exception) {
       return Left(exception);
     }, (user) {

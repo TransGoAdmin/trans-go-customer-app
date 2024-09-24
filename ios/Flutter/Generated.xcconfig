@@ -2,7 +2,7 @@
 FLUTTER_ROOT=/Users/manu/Documents/softwares/flutter
 FLUTTER_APPLICATION_PATH=/Users/manu/Documents/code/GVB/trans-go-customer-app
 COCOAPODS_PARALLEL_CODE_SIGN=true
-FLUTTER_TARGET=/Users/manu/Documents/code/GVB/trans-go-customer-app/lib/main.dart
+FLUTTER_TARGET=/Users/manu/Documents/code/GVB/trans-go-customer-app/lib/main_dev.dart
 FLUTTER_BUILD_DIR=build
 FLUTTER_BUILD_NAME=1.0.0
 FLUTTER_BUILD_NUMBER=1
